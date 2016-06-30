@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	.row
+		.col-xs-12.col-sm-6.location-map
+			.panel.panel-primary
+				.panel-body
+					img.img-responsive.img-rounded(src='http://maps.googleapis.com/maps/api/staticmap?center=51.0,-0.1&zoom=13&size=400x350&sensor=false&markers=51.01,0.01&scale=15')
+
+	#banner.page-header
+		.row
+			.col-lg-6
+				h1= pageHeader.title
+				small &nbsp;#{pageHeader.strapline}
+
+	.row
+		.col-xs-12.col-sm-8(ng-controller="mapListControl")
+			.error {{ message }}
+			.row.list-group
+				.col-xs-12.list-group-item(ng-repeat="m in data.maps.jsonData")
+					h4 
+						{{ m.filename }}
+
+		.col-xs-12.col-sm-4 
+			p.lead= sidebar

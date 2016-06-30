@@ -1,0 +1,28 @@
+<navigation></navigation>
+
+<div class="container">
+	<page-header content="vm.pageHeader"></page-header>
+	
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 location-map">
+			<div class="panel.panel-primary">
+				<div class="panel-body">
+					<img class="img-responsive img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?center=51.0,-0.1&zoom=13&size=400x350&sensor=false&markers=51,-0.1&scale=15')" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-8">
+			<div class="error">{{ vm.message }}</div>
+			<div class="row list-group">
+				<div class="col-xs-12 list-group-item" ng-repeat="m in vm.data.maps.jsonData">
+					<h4>{{ m.filename }}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<my-footer></my-footer>
+</div>

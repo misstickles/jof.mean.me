@@ -1,12 +1,37 @@
 doctype html
-html
-  head
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title= title
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(ng-app='jofApp')
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title= title
+		link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.navbar.navbar-default.navbar-fixed-top
+			.container
+				.navbar-header
+					a.navbar-brand(href='/') Jo F
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+				#navbar-main.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li
+							a(href='/about/') About
+						li
+							a(href='/maps/') Maps
 
-    script(src='/javascripts/vendor/jquery.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
+		.container
+			div(ng-view)
+				block content
+
+			footer
+				.row
+					.col-xs-12
+						small Written in MEAN by Jo F &copy;2016
+
+		script(src='/javascripts/vendor/angular.min.js')
+		script(src='/lib/angular-route.min.js')
+		script(src='/gen/jof.min.js')
+		script(src='/javascripts/vendor/jquery.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')

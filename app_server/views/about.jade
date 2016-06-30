@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	#banner.page-header
+		.row
+			.col-md-6.col-sm-12
+				h1= pageHeader.title
+					small &nbsp;#{pageHeader.strapline}
+
+	.row
+		each s in stuff
+			.col-xs-3.list-group-item
+				h4= s.name
+
+				for t in s.hobbies
+					span.label.label-warning= t
+
+	.row
+		.col-md-6.col-sm-12
+			p
+				| This is me and this is mine.
+				| <br /><br />
+				| I am MEAN.  I rock.
