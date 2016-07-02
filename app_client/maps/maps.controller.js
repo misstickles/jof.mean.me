@@ -8,9 +8,10 @@
 		var vm = this;
 
 		vm.pageHeader = {
-			title: 'My little walks',
-			strapline: 'Come rain, come shine, just do it.'
-		}
+			title: 'My Little Walks',
+			description: 'Come rain. Come shine. Just do it.',
+			buttonText: 'Go Walkies'
+		};
 
 		vm.getMaps = function() {
 			vm.message = 'Fetching some cool stuff.';

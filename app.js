@@ -23,18 +23,23 @@ var appClientFiles = [
   'app_client/app.js',
   'app_client/maps/maps.controller.js',
   'app_client/common/services/mapsData.service.js',
+  'app_client/common/directives/map/map.factory.js',
+  'app_client/common/directives/map/map.directive.js',
   'app_client/common/directives/myFooter/myFooter.directive.js',
   'app_client/common/directives/navigation/navigation.directive.js',
   'app_client/common/directives/pageHeader/pageHeader.directive.js'
 ];
-var uglified = uglifyJs.minify(appClientFiles, { compress: false, });
-fs.writeFile('public/gen/jof.min.js', uglified.code, function(err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Script generated and saved: gen/jof.min.js');
-  }
-});
+// var uglified = uglifyJs.minify(appClientFiles, { 
+//   compress: false,
+//   beautify: true
+// });
+// fs.writeFile('public/gen/jof.min.js', uglified.code, function(err) {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log('Script generated and saved: gen/jof.min.js');
+//   }
+// });
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -49,7 +54,7 @@ app.use(express.static(path.join(__dirname, 'app_client')));
 app.use('/api', routesApi);
 // app.use('/', routes);
 app.use(function(req, res) {
-  res.sendfile(path.join(__dirname, 'app_client', 'index.html'));
+  res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
 });
 
 // catch 404 and forward to error handler
