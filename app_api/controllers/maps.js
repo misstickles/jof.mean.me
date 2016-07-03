@@ -1,5 +1,8 @@
 var parseString = require('xml2js').parseString;
 const fs = require('mz/fs');
+var path = require('path');
+
+var mapData = require('../data/map.detail.json');
 
 var sendJsonResponse = function(res, status, content) {
 	res.status(status);
@@ -8,53 +11,49 @@ var sendJsonResponse = function(res, status, content) {
 
 var jsonData = [];
 
-/* GET all maps */
-// TODO: WTF??  This needs to be run twice to get the jsonData...
+// GET all maps
 module.exports.getAllMaps = function(req, res) {
-
-	fs.readdir('public/data/maps')
-		.then(function(filenames) {
-			filenames.forEach(function(filename) {
+	fs.readdir('./public/data/maps')
+		.then(filenames => {
+			filenames.forEach(filename => {
 				_readGpxFileToJson(filename);
-				//console.log(jsonData);
 			});
 
-			sendJsonResponse(res, 200, { "status":"success", jsonData });
+			sendJsonResponse(res, 200, { jsonData });
 			jsonData = [];
 		})
-		.catch(function(err) {
-			sendJsonResponse(res, 500, { "status":"error", "message":err })
+		.catch(err => {
+			console.error(err);
+			sendJsonResponse(res, 500, { "message": err });
 		});
 };
 
-/* GET map data points by data id */
-module.exports.getMapData = function(req, res) {
-	console.log('getMapData ' + req);
-	if (req.params && req.params.mapid) {
-		_readGpxFileToJson(req.params.mapid + ".gpx");
-		sendJsonResponse(res, 200, { "status":"success", jsonData });
-		jsonData = [];
-	}
-};
-
-function _readGpxFileToJson(filename) {
+var _readGpxFileToJson = function(filename) {
 	fs.readFile('public/data/maps/' + filename, 'utf8', function(err, xml) {
-		if (err) {
-			return console.error(err);
-		}
-
-		parseString(xml.toString(), function(err, result) {
+		if (path.extname(filename) === ".gpx") {
 			if (err) {
-				return console.error('parseString error: ' + err);
+				return console.error(err);
 			}
 
-			result['filename'] = filename;
-			jsonData.push(result); // JSON.stringify(result);
-		});
+			parseString(xml.toString(), function(err, result) {
+				if (err) {
+					return console.error('parseString error: ' + err);
+				}
+
+				result['title'] = mapData[filename].title;
+				result['desc'] = mapData[filename].desc;
+				result['tags'] = mapData[filename].tags;
+				result['dist'] = mapData[filename].dist;
+				result['circular'] = mapData[filename].circular;
+				result['filename'] = filename;
+				result['date'] = mapData[filename].date;
+				jsonData.push(result);
+			});
+		}
 	});
 }
 
-function _readFilePromisified(filename, index, array) {
+var _readFilePromisified = function(filename, index, array) {
 	filename = 'public/data/maps/' + filename;
 	return new Promise(
 		function (resolve, reject) {

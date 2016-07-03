@@ -5,12 +5,12 @@
 
 	mapsData.$inject = ['$http'];
 	function mapsData($http) {
-		var mapsById = function(id) {
-			return $http.get('/api/maps?id=' + id);
+		var maps = function() {
+			return $http.get('/api/maps');
 		};
 
 		return {
-			mapsById : mapsById
+			maps : maps
 		};
 	}
 

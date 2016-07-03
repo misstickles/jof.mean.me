@@ -1,0 +1,46 @@
+{
+	"2016-07-02_13-15_Sat.gpx" : {
+		"title": "Balcome - Staplefield - Ouse Valley Viaduct - Ardingly Reservoir",
+		"desc": "A hard-on-the-feet and hilly walk, with the purpose of gawping at the viaduct.  Gorgeous Sussex countryside in places, fabulous varied views and a VIADUCT!",
+		"tags": [
+			"Balcombe", "Staplefield", "Ouse Valley Viaduct", "Ardingly Reservoir"
+		],
+		"dist": "approx. 12 miles",
+		"date": "2016-07-02",
+		"circular": true,
+		"photos": ""
+	},
+	"2016-06-11_13-14_Sat.gpx" : {
+		"title": "Lindfield (South) - Horsted Keynes",
+		"desc": "A very wet walk.  Slightly below par in the views department, but lots of lovely woods and fields and mud.",
+		"tags": [
+			"Horsted Keynes", "Lindfield"
+		],
+		"dist": "12.5 miles",
+		"date": "2016-06-11",
+		"circular": true,
+		"photos": "http://pix.com"
+	},
+	"2016-06-05_12-12_Sun.gpx" : {
+		"title": "Lindfield (North) - Ardingly Reservoir",
+		"desc": "",
+		"tags": [
+			"Lindfield", "Ardingly Reservoir"
+		],
+		"dist": "6-ish miles",
+		"date": "2016-06-05",
+		"circular": true,
+		"photos": "http://pix.com"
+	},
+	"2016-05-28_12-13_Sat.gpx" : {
+		"title": "Kingscote - Sheffield Park",
+		"desc": "A ride behind the C class, followed by a walk from Kingscote to Sheffield Park.  Follows the Bluebell Railway.",
+		"tags": [
+			"Kingscote", "Sheffield Park", "Bluebell Railway", "Circular with Steam Train"
+		],
+		"dist": "approx. 10 miles",
+		"date": "2016-05-28",
+		"circular": false,
+		"photos": "http://pix.com"
+	}
+}

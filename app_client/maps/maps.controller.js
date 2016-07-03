@@ -7,16 +7,19 @@
 	function mapsController($scope, mapsData) {
 		var vm = this;
 
+		vm.sortOrder = ['-filename'];
+
 		vm.pageHeader = {
 			title: 'My Little Walks',
 			description: 'Come rain. Come shine. Just do it.',
-			buttonText: 'Go Walkies'
+			buttonText: 'Go Walkies',
+			link: 'maps#maps'
 		};
 
 		vm.getMaps = function() {
 			vm.message = 'Fetching some cool stuff.';
 
-			mapsData.mapsById('2016-06-05_12-12_Sun')
+			mapsData.maps()
 				.success(function(data) {
 					vm.message = data.jsonData.length > 0 ? "" : "No cool stuff found.  Boo :o(";
 					vm.data = { maps: data };
