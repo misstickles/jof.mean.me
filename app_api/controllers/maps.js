@@ -1,5 +1,5 @@
 var parseString = require('xml2js').parseString;
-const fs = require('mz/fs');
+var fs = require('mz/fs');
 var path = require('path');
 
 var mapData = require('../data/map.detail.json');
@@ -9,18 +9,16 @@ var sendJsonResponse = function(res, status, content) {
 	res.json(content);
 };
 
-var jsonData = [];
-
 // GET all maps
 module.exports.getAllMaps = function(req, res) {
+	var data = [];
 	fs.readdir('./public/data/maps')
 		.then(filenames => {
 			filenames.forEach(filename => {
-				_readGpxFileToJson(filename);
+				data.push(_readGpxFileToJson(filename));
 			});
 
-			sendJsonResponse(res, 200, { jsonData });
-			jsonData = [];
+			sendJsonResponse(res, 200, { data });
 		})
 		.catch(err => {
 			console.error(err);
@@ -29,17 +27,19 @@ module.exports.getAllMaps = function(req, res) {
 };
 
 var _readGpxFileToJson = function(filename) {
-	fs.readFile('public/data/maps/' + filename, 'utf8', function(err, xml) {
+	fs.readFile('./public/data/maps/' + filename, 'utf8', function(err, xml) {
 		if (path.extname(filename) === ".gpx") {
 			if (err) {
 				return console.error(err);
 			}
 
 			parseString(xml.toString(), function(err, result) {
+
 				if (err) {
 					return console.error('parseString error: ' + err);
 				}
 
+				var data = [];
 				result['title'] = mapData[filename].title;
 				result['desc'] = mapData[filename].desc;
 				result['tags'] = mapData[filename].tags;
@@ -47,10 +47,12 @@ var _readGpxFileToJson = function(filename) {
 				result['circular'] = mapData[filename].circular;
 				result['filename'] = filename;
 				result['date'] = mapData[filename].date;
-				jsonData.push(result);
+				data.push(result);
 			});
 		}
 	});
+
+	return data;
 }
 
 var _readFilePromisified = function(filename, index, array) {
