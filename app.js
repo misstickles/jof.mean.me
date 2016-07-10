@@ -19,16 +19,16 @@ var app = express();
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'jade');
 
-var appClientFiles = [
-  'app_client/app.js',
-  'app_client/maps/maps.controller.js',
-  'app_client/common/services/mapsData.service.js',
-  'app_client/common/directives/map/map.factory.js',
-  'app_client/common/directives/map/map.directive.js',
-  'app_client/common/directives/myFooter/myFooter.directive.js',
-  'app_client/common/directives/navigation/navigation.directive.js',
-  'app_client/common/directives/pageHeader/pageHeader.directive.js'
-];
+// var appClientFiles = [
+//   'app_client/app.js',
+//   'app_client/maps/maps.controller.js',
+//   'app_client/common/services/mapsData.service.js',
+//   'app_client/common/directives/map/map.factory.js',
+//   'app_client/common/directives/map/map.directive.js',
+//   'app_client/common/directives/myFooter/myFooter.directive.js',
+//   'app_client/common/directives/navigation/navigation.directive.js',
+//   'app_client/common/directives/pageHeader/pageHeader.directive.js'
+// ];
 // var uglified = uglifyJs.minify(appClientFiles, { 
 //   compress: false,
 //   beautify: true
@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'app_client')));
 
 app.use('/api', routesApi);
-// app.use('/', routes);
+
 app.use(function(req, res) {
   res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
 });

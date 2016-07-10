@@ -35,13 +35,15 @@
 	</head>
 
 	<body ng-view>
+	<script src='https://www.gstatic.com/charts/loader.js'></script>
 		<script src='/javascripts/vendor/angular.min.js'></script>
 		<script src='/lib/angular-route.min.js'></script>
 <!-- 		<script src='/gen/jof.min.js'></script> -->
   <script src='/app.js'></script>
   <script src='/maps/maps.controller.js'></script>
   <script src='/common/services/mapsData.service.js'></script>
-  <script src='/common/directives/map/map.factory.js'></script>
+  <script src='/common/directives/common/googleMaps.factory.js'></script>
+  <script src='/common/directives/common/googleCharts.factory.js'></script>
   <script src='/common/directives/map/map.directive.js'></script>
   <script src='/common/directives/myFooter/myFooter.directive.js'></script>
   <script src='/common/directives/navigation/navigation.directive.js'></script>
@@ -53,8 +55,6 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 		<script src="/vendor/scrollreveal/scrollreveal.min.js"></script>
 		<script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-		<script src="/javascripts/creative.min.js"></script>
 
 	</body>
 </html>

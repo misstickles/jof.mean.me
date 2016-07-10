@@ -1,6 +1,1 @@
-.header-content{background-color:rgba(51,51,51,0.3);
-	@media(min-width: 768px) {
-		padding: 100px 15px;
-	}
-}
-#map-container{position:relative;padding-bottom:50%;height:0;overflow:hidden}#map{position:absolute;top:0;left:0;width:100% !important;height:100% !important}
+.header-content{background-color:rgba(51,51,51,0.3);padding:40px}#map-container{position:relative;padding-bottom:50%;height:0;overflow:hidden}#map{position:absolute;top:0;left:0;width:100% !important;height:100% !important}

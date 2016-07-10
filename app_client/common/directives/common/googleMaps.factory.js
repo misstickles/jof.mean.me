@@ -1,7 +1,7 @@
 (function() {
 	angular
 		.module('jofApp')
-		.factory('mapsFactoryPromise', googleMapsFactory);
+		.factory('googleMapsPromise', googleMapsFactory);
 
 	googleMapsFactory.$inject = ['$q', '$rootScope', '$window'];
 	function googleMapsFactory($q, $rootScope, $window) {

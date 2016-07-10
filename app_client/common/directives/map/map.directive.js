@@ -3,9 +3,8 @@
 		.module('jofApp')
 		.directive('map', map);
 
-	map.$inject = ['mapsFactoryPromise'];
-	function map(mapsFactoryPromise) {
-		var data 
+	map.$inject = ['googleMapsPromise', 'googleChartsPromise'];
+	function map(googleMapsPromise, googleChartsPromise) {
 		return {
 			restrict: 'EA',
 			scope: {
@@ -13,10 +12,10 @@
 			},
 			templateUrl: '/common/directives/map/map.template.html',
 			link: function($scope, $element, $attrs) {
-				// TODO: put somewhere more generic!
+				// TODO: put tooltip somewhere more generic!
 				$('[data-toggle="tooltip"]').tooltip();
 
-				mapsFactoryPromise.mapsInitialised.then(function() {
+				googleMapsPromise.mapsInitialised.then(function() {
 					var options = {
 						mapTypeId: google.maps.MapTypeId.TERRAIN,
 						polyColours: [ '#800000', '#008000' ]
@@ -55,6 +54,34 @@
 						google.maps.event.trigger(map, 'resize');
 						map.setCenter(center);
 					});
+				});
+
+				googleChartsPromise.chartsInitialised.then(function() {
+					var data, chart;
+
+					google.charts.load('current', { 'packages' : ['line']});
+					google.charts.setOnLoadCallback(drawChart);
+
+					function drawChart() {
+						data = new google.visualization.DataTable();
+						data.addColumn('number', 'Time');
+						data.addColumn('number', 'Altitude');
+						data.addRows([
+							[1, 400], [2, 410], [3, 408], [4, 402], [5, 412]
+						]);
+
+						var options = {
+							chart: {
+								title: 'My altitude',
+								subtitle: 'in feet'
+							},
+							width: 900,
+							height: 500
+						};
+
+						var chart = new google.charts.Line($element[0].querySelector('#chart'));
+						chart.draw(data, options);
+					}
 				});
 			},
 		};
