@@ -9,9 +9,7 @@
 			scope: {
 				content: '=content',
 			},
-			templateUrl: '/common/directives/pageHeader/pageHeader.template.html',
-			link: function($scope, $element, $attrs) {
-			},
+			templateUrl: '/common/directives/pageHeader/pageHeader.template.html'
 		};
 	}
 })();

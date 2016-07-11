@@ -11,8 +11,12 @@
 				templateUrl: '/maps/maps.view.html',
 				controller: 'mapsController',
 				controllerAs: 'vm'
+			}).when('/about', {
+				templateUrl: '/about/about.view.html',
+				controller: 'aboutController',
+				controllerAs: 'vm'
 			}).otherwise({
-				//redirectTo: '/'
+				redirectTo: '/'
 			});
 
 		$locationProvider.html5Mode(true);

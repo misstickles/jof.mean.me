@@ -13,7 +13,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="error">{{ vm.message }}</div>
+				<div class="error" ng-bind-html="vm.message"></div>
 				<div ng-repeat="m in vm.data.maps.jsonData | orderBy: vm.sortOrder">
 					<div map class="img-responsive img-rounded" content="m"></div>
 					<hr class="primary">
