@@ -1,23 +1,3 @@
-<div class="row">
-	<div id="map-container" class="col-sm-7">
-		<div id="map"></div>
-		<div id="chart"></div>
-	</div>
-	<div class="col-sm-5">
-		<h3>
-			<small>[{{ content.date | date:'dd MMMM yyyy' }}]</small>
-			{{ content.title }}
-			<small ng-show="content.circular"><i class="glyphicon glyphicon-repeat" aria-hidden="true" data-toggle="tooltip" title="This is a circular route.  You can come back all by yourself." data-placement="bottom"></i></small>
-		</h3>
-		<h4>{{ content.desc }}</h4>
-		<h5>{{ content.dist }}</h5>
-		<p>
-			<span ng-repeat="t in content.tags">
-				<span class="label label-success">
-					{{ t }}
-				</span>&nbsp;
-			</span>
-		</p>
-		<a class="btn btn-primary" href="#">Show Me Piccies <span class="glyphicon glyphicon-chevron-right"></span></a>
-	</div>
+<div id="map-container">
+	<div id="map"></div>
 </div>

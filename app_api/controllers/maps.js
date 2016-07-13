@@ -1,7 +1,8 @@
 var parseString = require('xml2js').parseString;
-const fs = require('mz/fs');
+var fs = require('mz/fs');
 var path = require('path');
 
+var mapDirectory = './public/data/maps/';
 var mapData = require('../data/map.detail.json');
 
 var sendJsonResponse = function(res, status, content) {
@@ -13,7 +14,7 @@ var jsonData = [];
 
 // GET all maps
 module.exports.getAllMaps = function(req, res) {
-	fs.readdir('./public/data/maps')
+	fs.readdir(mapDirectory)
 		.then(filenames => {
 			filenames.forEach(filename => {
 				_readGpxFileToJson(filename);
@@ -29,7 +30,7 @@ module.exports.getAllMaps = function(req, res) {
 };
 
 var _readGpxFileToJson = function(filename) {
-	fs.readFile('public/data/maps/' + filename, 'utf8', function(err, xml) {
+	fs.readFile(mapDirectory + filename, 'utf8', function(err, xml) {
 		if (path.extname(filename) === ".gpx") {
 			if (err) {
 				return console.error(err);

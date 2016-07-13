@@ -36,18 +36,21 @@
 	</head>
 
 	<body ng-view>
-	<script src='https://www.gstatic.com/charts/loader.js'></script>
+		<script src='https://www.gstatic.com/charts/loader.js'></script>
 		<script src='/javascripts/vendor/angular.min.js'></script>
 		<script src='/lib/angular-route.min.js'></script>
 <!-- 		<script src='/gen/jof.min.js'></script> -->
+  <script src='/javascripts/prototypes/Date.js'></script>
   <script src='/app.js'></script>
+  <script src='/common/filters/trusted.filter.js'></script>
   <script src='/maps/maps.controller.js'></script>
   <script src='/about/about.controller.js'></script>
   <script src='/common/services/mapsData.service.js'></script>
   <script src='/common/factories/googleMaps.factory.js'></script>
-  <script src='/common/factories/googleCharts.factory.js'></script>
   <script src='/common/directives/common/scrollOnClick.directive.js'></script>
   <script src='/common/directives/map/map.directive.js'></script>
+  <script src='/common/directives/map/mapDetail.directive.js'></script>
+  <script src='/common/directives/chart/chart.directive.js'></script>
   <script src='/common/directives/myFooter/myFooter.directive.js'></script>
   <script src='/common/directives/navigation/navigation.directive.js'></script>
   <script src='/common/directives/pageHeader/pageHeader.directive.js'></script>

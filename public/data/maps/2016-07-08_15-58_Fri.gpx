@@ -2656,14 +2656,6 @@
         <time>2016-07-08T16:40:38Z</time>
         <hdop>10.0</hdop>
       </trkpt>
-      <trkpt lat="51.0058922" lon="-0.0276227">
-        <ele>28.240001678466797</ele>
-        <time>2016-07-08T16:40:54Z</time>
-        <hdop>16.0</hdop>
-        <extensions>
-          <speed>15.25</speed>
-        </extensions>
-      </trkpt>
     </trkseg>
   </trk>
 </gpx>

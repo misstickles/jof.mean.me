@@ -6,17 +6,27 @@
 	<div class="container">
  		<div class="row">
 			<div class="col-lg-12 text-center">
-<!-- 				<h2 class="section-heading">Maps</h2>
+ 				<h2 class="section-heading">Walking Maps</h2>
 				<hr class="primary">
-				<p clas="text-muted">Play with the maps in the usual way.  Piccies not in place yet.  Select a tag to filter the results.</p> -->
+				<p clas="text-muted">Play with the maps in the usual way...  Altitude data is also from GPS.  Hmmm.<br> Coming soon: select a tag to filter; piccies.</p>
+				<p>&nbsp;</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="error" ng-bind-html="vm.message"></div>
+				<div class="error" ng-bind-html="vm.message | trusted"></div>
 				<div ng-repeat="m in vm.data.maps.jsonData | orderBy: vm.sortOrder">
-					<div map class="img-responsive img-rounded" content="m"></div>
+					<div class="row">
+						<div class="col-sm-5 col-sm-push-7">
+							<div map-detail content="m"></div>
+						</div>
+						<div class="col-sm-7 col-sm-pull-5">
+							<div map class="img-responsive img-rounded" content="m"></div>
+							<div chart class="img-responsive img-rounded" content="m"></div>
+						</div>
+					</div>
 					<hr class="primary">
+					<p>&nbsp;</p>
 				</div>
 			</div>
 		</div>

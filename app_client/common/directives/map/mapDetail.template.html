@@ -1,0 +1,14 @@
+<h3>
+	<small>[{{ content.date | date:'EEEE, dd MMMM yyyy' }}]</small>
+	<br />
+	{{ content.title }}
+	<small ng-show="content.circular"><i class="glyphicon glyphicon-repeat" aria-hidden="true" data-toggle="tooltip" title="This is a circular route.  You can come back all by yourself." data-placement="bottom"></i></small>
+</h3>
+<h4 ng-bind="content.desc"></h4>
+<h5 ng-bind="content.dist"></h5>
+<p>
+	<span ng-repeat="t in content.tags">
+		<span class="label label-success" ng-bind="t"></span>&nbsp;
+	</span>
+</p>
+<a ng-show="content.photos" class="btn btn-primary" href="#">Show Me Piccies <span class="glyphicon glyphicon-chevron-right"></span></a>
