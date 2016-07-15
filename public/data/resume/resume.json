@@ -1,0 +1,220 @@
+﻿{
+    "general": {
+        "homeSection": {
+            "title": "Interactive R&eacute;sum&eacute;",
+            "lead": "Pensions Software Developer",
+            "firstname": "Jo",
+            "surname": "Faircloth"
+        },
+        "profileSection": { "title": "Profile", "lead": "How many beans make 5?" },
+        "experienceSection": { "title": "Experience", "lead": "There are only 10 types of people in the world: Those who understand binary and those who don't." },
+        "abilitySection": { "title": "Key Skills", "lead": "There are only 10 types of people in the world: Those who understand ternary, those who don't and those who mistake it for binary." },
+        "contactSection": { "title": "Contact", "lead": "Two beans, half a bean, a bean and a half and a bean." }
+    },
+    "profile": {
+    },
+    "contactDetails": {
+        "email": "jofaircloth@gmail.com",
+        "website": "http://jofaircloth.co.uk",
+        "currentLocation": {
+            "county": "Sussex",
+            "area": "Mid-Sussex",
+            "country": "UK"
+        }
+    },
+    "education": [
+        {
+            "school": "The Open University",
+            "subject": "Open",
+            "qualification": "BSc(hons)",
+            "locationUrl": "open.ac.uk",
+            "startDate": "2004",
+            "endDate": "2013",
+            "description": "Includes CertWAD, CertAPS",
+            "completed": true
+        },
+        {
+            "school": "Loughborough University",
+            "subject": "Electronic and Electrical Engineering with Diploma in Industrial Studies",
+            "qualification": "BEng(hons) DIS",
+            "locationUrl": "lboro.ac.uk",
+            "location": "Loughborough, Leicestershire LE11 3JD",
+            "startDate": "1997",
+            "endDate": "2001",
+            "description": "",
+            "completed": true
+        }
+    ],
+    "work": [
+        {
+            "company": "Equiniti Claybrook",
+            "companyType": "Pensions Administration",
+            "position": "Pensions Software Developer",
+            "description": [ "Dunno yet" ],
+            "startDate": 2015,
+            "endDate": "present",
+            "address": "Sutherland House, Russel Way, Crawley RH10 1UH",
+            "link": "http://www.dilbert.com",
+            "googleLocation": "Equiniti+Paymaster+Russell Way+Crawley+UK"
+        },
+        {
+            "company": "Equiniti Claybrook",
+            "companyType": "Pensions Administration",
+            "position": "Analyst Developer and Technical Lead",
+            "description": [
+                "Due to ability to identify, demonstrate and explain code approaches, I was promoted to technical lead early on a large project (2.5 million members, 800 DB tables) for civil service pensions.",
+                "Managing fixes to the core product, writing mostly generic components for 100+ workflows across two projects (pensions administration and payroll).",
+                "Successfully managing over 1500 defects raised during all stages of testing (admin only) over a small team of developers (average 6) to meet deadlines.",
+                "Trained and supported new team members to be productive in a very short time (within 2 months of deadline).",
+                "I am the 'goto' for technical support within my team and wider company. SQL, XSL, CSS, HTML and understanding VB and .NET errors particularly important."
+            ],
+            "startDate": 2012,
+            "endDate": 2015,
+            "address": "Sutherland House, Russel Way, Crawley RH10 1UH",
+            "link": "http://www.dilbert.com",
+            "googleLocation": "Equiniti+Paymaster+Russell Way+Crawley+UK"
+        },
+        {
+            "company": "STG (Student Travel Group)",
+            "companyType": "School Travel",
+            "position": "Software Developer",
+            "description": [
+                "Developed various live and near-live web applications, including a contact manager, booking manager and intranet.",
+                "New code based on MSSQL, LINQ-to-SQL, VB.NET and AJAX controls. Existing code was JavaScript/jQuery intense, which I maintained with help from developer tools, such as Internet Explorer's 'F12', Fiddler and SQL Server Profiler.",
+                "Fire warden"
+            ],
+            "startDate": 2011,
+            "endDate": 2012,
+            "address": "1 Jubilee Street, Brighton BN1 1GE",
+            "link": "http://www.dilbert.com",
+            "googleLocation": "1+Jubilee+Street+Brighton+UK"
+        },
+        {
+            "company": "AIG / Alico / MetLife",
+            "companyType": "Global Life Insurance",
+            "position": "Analyst Developer",
+            "description": [
+                "Worked on a large ASP.NET (VB) 3.5 web application.",
+                "Responsible for a component, from functional specification and sign off to managing database changes, test data, business objects, front-end, and test methods.",
+                "Wrote helper methods and AJAX where required. Used and developed using generics, interfaces, LINQ/JSON. Developed most CSS/HTML for the site. Used 3rd party tools (OpenAccess, CodeSmith) to script and generate data access classes and documentation for the database."
+            ],
+            "startDate": 2008,
+            "endDate": 2011,
+            "address": "Invicta House, Trafalgar Place, Brighton BN1 4FR",
+            "link": "http://www.dilbert.com",
+            "googleLocation": "MetLife+Invicta+House+Trafalgar+Place+Brighton+UK"
+        },
+        {
+            "company": "Excel Aviation / XL Leisure Group",
+            "companyType": "Airline",
+            "position": "Web / Applications Developer",
+            "description": [
+                "Designed the group intranet with MSSQL backend and ASP.NET (C#) business objects and front end. Used MS Office API to interface with MSExcel and MSWord.",
+                "Researched use of Microsoft Office SharePoint Server 2007 for an updated intranet and communications portal. Built a secured Windows Server 2003 server and client PC (Windows XP) for testing and development.",
+                "Built bespoke web and Windows applications; from consultation, design and development, to testing, integration into the business, and support.",
+                "Project managed a 3rd party document management project, for integration into multiple systems within the business.",
+                "Provided user support for a number of 3rd party and in-house systems."
+            ],
+            "startDate": 2004,
+            "endDate": 2008,
+            "address": "Explorer House, Fleming Way, Crawley RH10 9EA",
+            "link": "http://en.wikipedia.org/wiki/XL_Airways_UK",
+            "googleLocation": "Grant+Thornton+Fleming+Way+Crawley+UK",
+            "note": "Went bust after I left"
+        },
+        {
+            "company": "Trimble Navigation New Zealand Ltd",
+            "companyType": "GPS solutions in engineering and construction",
+            "position": "Junior Engineer",
+            "description": [ "Part of an international development team, developing a 'Rugged Colour Display Unit' for Caterpillar." ],
+            "startDate": 2002,
+            "endDate": 2003,
+            "address": "11 Birmingham Drive, Christchurch 8024, <strong>New Zealand</strong>",
+            "link": "http://www.trimble.com",
+            "googleLocation": "Trimble+Navigation+Birmingham+Drive+Christchurch+Canterbury+New+Zealand",
+            "googleZoom": 12,
+            "note": "Sadly, my building is not there.  It burned down a few months after the earthquakes of February 2011."
+        },
+        {
+            "company": "Holiday Inn On Avon",
+            "companyType": "Hotel",
+            "position": "Housekeeper",
+            "description": [ "Worked bloody hard 6 days a week" ],
+            "startDate": 2002,
+            "endDate": "",
+            "address": "346 Oxford Terrace, Christchurch 8011, <strong>New Zealand</strong>",
+            "link": "",
+            "googleLocation": "346+Oxford+Terrace+Christchurch+New+Zealand",
+            "googleZoom": 12
+        },
+        {
+            "company": "Waitrose",
+            "companyType": "Supermarket",
+            "position": "Supermarket Assistant",
+            "description": [ "Worked service counters and grocery area, completed paperwork and trained new recruits." ],
+            "startDate": 2002,
+            "endDate": "",
+            "address": "10 Sayers Lane, Tenterden, Kent TN30 6BW",
+            "link": "http://www.waitrose.com",
+            "googleLocation": "Wairose+10+Sayers+Lane+Tenterden+Kent+UK"
+        },
+        {
+            "company": "Tandberg Television",
+            "companyType": "Digital TV",
+            "position": "Diploma in Industrial Studies<br />Junior Engineer",
+            "description": [ "Assisted in the complete design of a successful DVB demodulator" ],
+            "startDate": 1999,
+            "endDate": 2000,
+            "address": "Stoneham Lane, Eastleigh SO50 9NW",
+            "link": "http://www.waitrose.com",
+            "googleLocation": "Stoneham+Lane+Eastleigh+UK"
+        },
+        {
+            "company": "Bayshore Inn",
+            "companyType": "School Travel",
+            "position": "Housekeeper",
+            "description": [ "6-day week in a housekeeping team in a busy Canadian resort hotel." ],
+            "startDate": "summer 1998",
+            "endDate": "",
+            "address": "111 Waterton Avenue, Waterton Lakes National Park, <strong>Canada</strong>",
+            "link": "",
+            "googleLocation": "Bayshore+Inn+Waterton+Avenue+Waterton+AB+Canada",
+            "googleZoom": 12
+        }
+    ],
+    "skills": [
+        { "title": "HTML", "level": 5 },
+        { "title": "CSS(3)", "level": 3 },
+        { "title": "AngularJS", "level": 5 },
+        { "title": "MVC(5)", "level": 5 },
+        { "title": "Javascript", "level": 4 },
+        { "title": "Bootstrap", "level": 5 },
+        { "title": "Java", "level": 5 },
+        { "title": "C#", "level": 3 },
+        { "title": "JQuery", "level": 5 },
+        { "title": "GitHub", "level": 3 },
+        { "title": "Dependency Injection", "level": 1 },
+        { "title": "Bootstrap", "level": 5 },
+        { "title": "Mixin", "level": 5 },
+        { "title": "LESS", "level": 3 },
+        { "title": "AngularJS", "level": 5 },
+        { "title": "MVC(5)", "level": 5 },
+        { "title": "Javascript", "level": 4 },
+        { "title": "Javascript", "level": 4 },
+        { "title": "Bootstrap", "level": 5 }
+    ],
+    "tools": [
+        { "title": "Visual Studio (upto) 2013", "level": 4 },
+        { "title": "Microsoft Office", "level": 5 },
+        { "title": "Server 2008", "level": 1 },
+        { "title": "Linux (Fedora)", "level": 2 },
+        { "title": "CAST", "level": 5 },
+        { "title": "Eclipse", "level": 4 }
+    ],
+    "interests": [
+        {
+            "title": "Ding dong",
+            "description": "the bells go ping"
+        }
+    ]
+}
