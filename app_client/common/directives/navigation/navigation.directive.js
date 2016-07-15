@@ -8,6 +8,7 @@
 			restrict: 'EA',
 			templateUrl: '/common/directives/navigation/navigation.template.html',
 			link: function($scope, $element, $attrs) {
+
 				// Highlight the top nav as scrolling occurs
 				$('body').scrollspy({
 				    target: '.navbar-fixed-top',

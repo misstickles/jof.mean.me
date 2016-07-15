@@ -17,9 +17,20 @@ implement mongoDB
 
 fix the map API!
 
+start / finish markers
+
+mile markers
+
 add weather
 
+add dove
+
 setup gulp
+	merge and minify js
+	minify css (already built from less)
+	js load order
+	gulp-concat
+	gzipping
 
 fix ie
 
@@ -29,6 +40,13 @@ filter on the tags
 
 about page
 
+consider:
+	autoprefixer https://www.npmjs.com/package/gulp-autoprefixer for css prefixes
+
+	https://www.browsersync.io/
+
+	eslint (jshint, jscs)
+		and in gulp
 
 
 
@@ -38,6 +56,8 @@ internal # links
 scroll
 
 Create details for each map (json on API layer, as one day to be in db)
+
+add map altitude charts
 
 
 

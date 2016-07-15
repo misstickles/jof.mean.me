@@ -75,7 +75,7 @@ aside {
 
 .navbar-default {
     background-color: white;
-    border-color: fade(@gray-darker, 5%);
+    border: none;
     .sans-serif-font;
     .transition-all;
     .navbar-header .navbar-brand {
@@ -120,7 +120,8 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: fade(white, 30%);
+        /*border-color: fade(white, 30%);*/
+        padding: 20px 0;
         .navbar-header .navbar-brand {
             color: fade(white, 70%);
             &:hover,
@@ -138,6 +139,7 @@ aside {
         &.affix {
             background-color: white;
             border-color: fade(@gray-darker, 5%);
+            padding: 0;
             .navbar-header .navbar-brand {
                 color: @theme-primary;
                 font-size: 14px;
@@ -165,6 +167,7 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
+    background-attachment: fixed;
     /* background-image: url('../images/header.jpg'); */
     text-align: center;
     color: white;
