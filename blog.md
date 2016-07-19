@@ -48,6 +48,10 @@ consider:
 	eslint (jshint, jscs)
 		and in gulp
 
+dove
+	cache text file
+	use location service
+
 
 
 ## done

@@ -1,0 +1,60 @@
+<navigation></navigation>
+
+<section id="towers">
+	<div class="container">
+ 		<div class="row">
+			<div class="col-lg-12 text-center">
+ 				<h2 class="section-heading">Tower Bell Ringing Guide</h2>
+				<hr class="primary">
+				<p clas="text-muted"></p>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+		<form>
+			<div class="form-group row">
+				<label class="col-sm-3 text-right" for="place">Place</label>
+				<div class="col-sm-9">
+					<input id="place" class="form-control" placeholder="Type Tower Name">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-3 text-right" for="numberOfBells">Number of Bells</label>
+				<div class="col-sm-3">
+					<select id="numberOfBells" multiple class="form-control">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+				<label class="col-sm-3 text-right" for="practiceNight">Practice Night</label>
+				<div class="col-sm-3">
+					<select id="practiceNight" multiple class="form-control">
+						<option>1</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-3 text-right" for="county">County</label>
+				<div class="col-sm-9">
+					<select id="county" multiple class="form-control">
+						<option>1</option>
+					</select>
+				</div>
+		</form>
+	</div>
+</section>
+
+<section class="bg-primary">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="error" ng-bind-html="vm.message | trusted"></div>
+			<div ng-repeat="d in vm.data">
+				<div tower content="d"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<my-footer></my-footer>

@@ -15,6 +15,10 @@
 				templateUrl: '/about/about.view.html',
 				controller: 'aboutController',
 				controllerAs: 'vm'
+			}).when('/towers', {
+				templateUrl: '/towers/towers.view.html',
+				controller: 'towersController',
+				controllerAs: 'vm'
 			}).otherwise({
 				redirectTo: '/'
 			});
