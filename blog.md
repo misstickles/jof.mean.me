@@ -79,3 +79,10 @@ update to Azure...
 	(move maps to bin\data\maps)
 	use ../public/data/maps directory in app_api\controllers\maps.js
 		restart and ctrl+f5
+
+
+
+
+jquery.easing does not work from npm.  Add file from github, https://github.com/gdsmith/jquery.easing/blob/master/jquery.easing.min.js, to app_client\lib
+
+angular-route is not available via npm.  Add file to app_client\lib
