@@ -2,7 +2,7 @@ var parseString = require('xml2js').parseString;
 var fs = require('mz/fs');
 var path = require('path');
 
-var mapDirectory = './public/data/maps/';
+var mapDirectory = 'app_api/data/maps/';
 var mapData = require('../data/map.detail.json');
 
 var sendJsonResponse = function(res, status, content) {
