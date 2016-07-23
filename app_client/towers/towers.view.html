@@ -20,29 +20,32 @@
 			<div class="form-group row">
 				<label class="col-sm-3 text-right" for="numberOfBells">Number of Bells</label>
 				<div class="col-sm-3">
-					<select id="numberOfBells" multiple class="form-control">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
+					<select id="numberOfBells" ng-model="vm.selectedBells" multiple class="form-control">
+						<option ng-repeat="b in vm.noBells | orderBy:vm.sortBells" value="{{ b.b }}">{{ b.b }} ({{ b.cnt }})</option>
 					</select>
 				</div>
 				<label class="col-sm-3 text-right" for="practiceNight">Practice Night</label>
 				<div class="col-sm-3">
-					<select id="practiceNight" multiple class="form-control">
-						<option>1</option>
+					<select id="practiceNight" ng-model="vm.selectedPn" multiple class="form-control">
+						<option ng-repeat="p in vm.pracNight | orderBy:vm.sortPn" value="{{ p.pn }}">{{ p.pn }} ({{ p.cnt }})</option>
 					</select>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-3 text-right" for="county">County</label>
+				<label class="col-sm-3 text-right" for="county">Country : County</label>
 				<div class="col-sm-9">
-					<select id="county" multiple class="form-control">
-						<option>1</option>
+					<select name="county" id="county" ng-model="vm.selectedCounties" multiple class="form-control" size="10">
+						<option ng-repeat="c in vm.counties | orderBy:vm.sortCounty" value="{{ c.cty }}">{{ c.ctry || 'England' }}  : {{ c.cty }} ({{ c.cnt }})</option>
 					</select>
 				</div>
+			</div>
 		</form>
+
+		<tt>
+			{{ vm.selectedBells }}<br/>
+			{{ vm.selectedPn }}<br>
+			{{ vm.selectedCounties }}
+		</tt>
 	</div>
 </section>
 
@@ -50,7 +53,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="error" ng-bind-html="vm.message | trusted"></div>
-			<div ng-repeat="d in vm.data">
+			<div ng-repeat="d in vm.data | filter:vm.filterOptions['function']">
 				<div tower content="d"></div>
 			</div>
 		</div>

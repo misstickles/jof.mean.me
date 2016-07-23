@@ -1,6 +1,8 @@
 var fs = require('mz/fs');
+var linq = require('linq');
 
 var towersListDirectory = './app_api/data/towers/';
+var towersList = require('../data/towers/towers.data.json');
 
 var sendJsonResponse = function(res, status, content) {
 	res.status(status);
@@ -9,13 +11,80 @@ var sendJsonResponse = function(res, status, content) {
 
 var jsonData = [];
 
-// GET all maps
-module.exports.getAllData = function(req, res) {
+// GET return all towers
+module.exports.getAll = function(req, res) {
+	console.log('get all');
+	sendJsonResponse(res, 200, towersList);
+};
+
+module.exports.counties = function(req, res) {
+	var unique = {};
+	var distinct = [];
+
+	var counter = towersList.reduce(function(cnt, curr) {
+		cnt[curr.County] = (cnt[curr.County] || 0) + 1;
+		return cnt;
+	}, {});
+
+	towersList.forEach(tower => {
+		if (typeof(unique[tower.County]) == 'undefined') {
+			distinct.push({ "ctry": tower.Country, "cty": tower.County, "cnt": counter[tower.County] });
+		}
+
+		unique[tower.County] = 0;
+	});
+
+	sendJsonResponse(res, 200, distinct);
+};
+
+module.exports.noBells = function(req, res) {
+	var unique = {};
+	var distinct = [];
+
+	var counter = towersList.reduce(function(cnt, curr) {
+		cnt[curr.Bells] = (cnt[curr.Bells] || 0) + 1;
+		return cnt;
+	}, {});
+
+	towersList.forEach(tower => {
+		if (typeof(unique[tower.Bells]) == 'undefined') {
+			distinct.push({"b": parseInt(tower.Bells), "cnt": counter[tower.Bells] });
+		}
+
+		unique[tower.Bells] = 0;
+	});
+
+	sendJsonResponse(res, 200, distinct);
+};
+
+module.exports.pracNight = function(req, res) {
+	var unique = {};
+	var distinct = [];
+
+	var counter = towersList.reduce(function(cnt, curr) {
+		cnt[curr.PracN] = (cnt[curr.PracN] || 0) + 1;
+		return cnt;
+	}, {});
+
+	towersList.forEach(tower => {
+		if (typeof(unique[tower.PracN]) == 'undefined') {
+			distinct.push({"pn": tower.PracN, "cnt": counter[tower.PracN] });
+		}
+
+		unique[tower.PracN] = 0;
+	});
+
+	sendJsonResponse(res, 200, distinct);
+};
+
+
+// GET import text file to json object
+module.exports.importJsonData = function(req, res) {
 	fs.readdir(towersListDirectory)
 		.then(file => {
 			_readFileToJson(file);
 			
-			sendJsonResponse(res, 200, { jsonData });
+			sendJsonResponse(res, 200, jsonData);
 			jsonData = [];
 		})
 		.catch(err => {
