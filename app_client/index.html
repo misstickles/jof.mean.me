@@ -10,10 +10,10 @@
 		<title>{{ vm.title }}</title>
 
 	    <!-- Bootstrap Core CSS -->
-	    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	    <!-- Custom Fonts -->
-	    <link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="/vendor/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -37,18 +37,29 @@
 
 	<body ng-view>
 		<script src='https://www.gstatic.com/charts/loader.js'></script>
-		<script src='/javascripts/vendor/angular.min.js'></script>
+		<script src='/vendor/angular/angular.min.js'></script>
+		<script src='/vendor/jquery/jquery.min.js'></script>
+		<script src='/vendor/bootstrap/js/bootstrap.min.js'></script>
+		<script src="/vendor/scrollreveal/scrollreveal.min.js"></script>
+		<script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<script src='/lib/angular-route.min.js'></script>
+		<script src='/lib/jquery.easing.min.js'></script>
 <!-- 		<script src='/gen/scripts.js'></script> -->
+
   <script src='/javascripts/prototypes/Date.js'></script>
   <script src='/app.js'></script>
   <script src='/common/filters/trusted.filter.js'></script>
+  <script src='/maps/maps.controller.js'></script>
+  <script src='/about/about.controller.js'></script>
+  <script src='/towers/towers.controller.js'></script>
   <script src='/common/services/mapsData.service.js'></script>
+  <script src='/common/services/towersData.service.js'></script>
   <script src='/common/factories/googleMaps.factory.js'></script>
   <script src='/common/directives/common/scrollOnClick.directive.js'></script>
   <script src='/common/directives/map/map.directive.js'></script>
   <script src='/common/directives/map/mapDetail.directive.js'></script>
   <script src='/common/directives/chart/chart.directive.js'></script>
+  <script src='/common/directives/towers/tower.directive.js'></script>
   <script src='/common/directives/myFooter/myFooter.directive.js'></script>
   <script src='/common/directives/navigation/navigation.directive.js'></script>
   <script src='/common/directives/pageHeader/pageHeader.directive.js'></script>

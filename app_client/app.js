@@ -18,6 +18,9 @@
 			}).when('/resume', {
 				templateUrl: '/resume/resume.view.html',
 				controller: 'resumeController',
+			}).when('/towers', {
+				templateUrl: '/towers/towers.view.html',
+				controller: 'towersController',
 				controllerAs: 'vm'
 			}).otherwise({
 				redirectTo: '/'

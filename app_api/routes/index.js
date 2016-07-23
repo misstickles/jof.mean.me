@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 var mapsController = require('../controllers/maps');
+var towersController = require('../controllers/towers');
+
 //var weatherController = require('../controllers/weather');
 
 // router.use(function(req, res, next) {
@@ -12,6 +14,11 @@ var mapsController = require('../controllers/maps');
 //router.get('/maps/:mapid', mapsController.getMapData);
 router.get('/maps', mapsController.getAllMaps);
 
+router.get('/towers/', towersController.getAll);
+router.get('/towers/counties', towersController.counties);
+router.get('/towers/noBells', towersController.noBells);
+router.get('/towers/pracNight', towersController.pracNight);
+router.get('/towers/importData', towersController.importJsonData);
 //router.get('/weather/:time/:locationid', weatherController.getAllWeather);
 // 
 
