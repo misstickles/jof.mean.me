@@ -1,5 +1,4 @@
 var fs = require('mz/fs');
-var linq = require('linq');
 
 var towersListDirectory = './app_api/data/towers/';
 var towersList = require('../data/towers/towers.data.json');
