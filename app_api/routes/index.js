@@ -3,6 +3,7 @@ var router = express.Router();
 
 var mapsController = require('../controllers/maps');
 var towersController = require('../controllers/towers');
+var resumeController = require('../controllers/resume');
 
 //var weatherController = require('../controllers/weather');
 
@@ -21,5 +22,6 @@ router.get('/towers/pracNight', towersController.pracNight);
 router.get('/towers/importData', towersController.importJsonData);
 //router.get('/weather/:time/:locationid', weatherController.getAllWeather);
 // 
+router.get('/resume', resumeController.getResume);
 
 module.exports = router;

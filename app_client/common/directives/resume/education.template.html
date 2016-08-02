@@ -1,0 +1,17 @@
+<section>
+	<h2 id="education" ng-bind="content.title"></h2>
+
+	<div class="row" ng-repeat="itm in content.data">
+		<div class="col-md-4 col-sm-12">
+			<h4 ng-bind="itm.school"></h4>
+			<p ng-bind="itm.qualification"></p>
+			<p ng-bind-template="{{itm.startDate}} - {{itm.endDate}}"></p>
+		</div>
+		<div class="col-md-8 col-sm-12">
+			<p>
+				<strong ng-bind="itm.subject"></strong>
+				<span ng-bind="itm.description"></span>
+			</p>
+		</div>
+	</div>
+</section>

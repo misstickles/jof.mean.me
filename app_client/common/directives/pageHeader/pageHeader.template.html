@@ -1,10 +1,10 @@
 <header style="background-image: url('../images/{{content.image}}');">
 	<div class="header-content">
 		<div class="header-content-inner">
-			<h1 id="homeHeading" ng-bind="content.title"></h1>
+			<h1 id="homeHeading" ng-bind-html="content.title | trusted"></h1>
 			<hr>
 			<p ng-bind-html="content.description | trusted"></p>
-			<a scroll-on-click scroll-to="{{ content.linkId }}" class="btn btn-primary btn-xl page-scroll" ng-show="content.buttonText" ng-bind="content.buttonText"></a>
+			<a scroll-on-click scroll-to="{{ content.linkId }}" class="btn btn-primary btn-xl" ng-show="content.buttonText" ng-bind="content.buttonText"></a>
 		</div>
 	</div>
 </header>

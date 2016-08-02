@@ -35,13 +35,16 @@
 	    <base href="/">
 	</head>
 
-	<body ng-view>
-		<script src='https://www.gstatic.com/charts/loader.js'></script>
-		<script src='/vendor/angular/angular.min.js'></script>
+	<body>
+		<ng-view></ng-view>
+ 		<script src='https://www.gstatic.com/charts/loader.js'></script>
+
 		<script src='/vendor/jquery/jquery.min.js'></script>
+		<script src='/vendor/angular/angular.min.js'></script>
 		<script src='/vendor/bootstrap/js/bootstrap.min.js'></script>
 		<script src="/vendor/scrollreveal/scrollreveal.min.js"></script>
 		<script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="/vendor/scrollreveal/scrollreveal.min.js"></script>
 		<script src='/lib/angular-route.min.js'></script>
 		<script src='/lib/jquery.easing.min.js'></script>
 <!-- 		<script src='/gen/scripts.js'></script> -->
@@ -49,30 +52,30 @@
   <script src='/javascripts/prototypes/Date.js'></script>
   <script src='/app.js'></script>
   <script src='/common/filters/trusted.filter.js'></script>
-  <script src='/maps/maps.controller.js'></script>
-  <script src='/about/about.controller.js'></script>
-  <script src='/towers/towers.controller.js'></script>
   <script src='/common/services/mapsData.service.js'></script>
   <script src='/common/services/towersData.service.js'></script>
+  <script src='/common/services/resumeData.service.js'></script>
   <script src='/common/factories/googleMaps.factory.js'></script>
   <script src='/common/directives/common/scrollOnClick.directive.js'></script>
+  <script src='/common/directives/common/starRating.directive.js'></script>
   <script src='/common/directives/map/map.directive.js'></script>
   <script src='/common/directives/map/mapDetail.directive.js'></script>
   <script src='/common/directives/chart/chart.directive.js'></script>
   <script src='/common/directives/towers/tower.directive.js'></script>
   <script src='/common/directives/myFooter/myFooter.directive.js'></script>
   <script src='/common/directives/navigation/navigation.directive.js'></script>
+  <script src='/common/directives/navigation/sidebar.directive.js'></script>
   <script src='/common/directives/pageHeader/pageHeader.directive.js'></script>
-  <script src='/maps/maps.controller.js'></script>
+  <script src='/common/directives/resume/experience.directive.js'></script>
+  <script src='/common/directives/resume/education.directive.js'></script>
+  <script src='/common/directives/resume/professional.directive.js'></script>
+  <script src='/common/directives/resume/summary.directive.js'></script>
+  <script src='/common/directives/resume/keySkills.directive.js'></script>
+  <script src='/common/directives/resume/interests.directive.js'></script>
   <script src='/about/about.controller.js'></script>
   <script src='/resume/resume.controller.js'></script>
-  
-		<script src='/javascripts/vendor/jquery.min.js'></script>
-		<script src='/bootstrap/js/bootstrap.min.js'></script>
-
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		<script src="/vendor/scrollreveal/scrollreveal.min.js"></script>
-		<script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src='/maps/maps.controller.js'></script>
+  <script src='/towers/towers.controller.js'></script>
 
 	</body>
 </html>

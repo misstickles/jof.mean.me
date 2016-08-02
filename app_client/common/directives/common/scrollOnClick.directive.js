@@ -7,7 +7,7 @@
 		return {
 			restrict: 'A',
 			scope: {
-				scrollTo: '@'
+				scrollTo: '@',
 			},
 			link: function($scope, $element, $attrs) {
 				$element.on('click', function() {

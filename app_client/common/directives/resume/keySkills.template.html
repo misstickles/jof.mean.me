@@ -1,0 +1,24 @@
+<section id="skills">
+	<h2 id="keySkills" ng-bind="content.title"></h2>
+	<p class="lead" ng-bind="content.lead"></p>
+
+	<div class="row">
+		<h3>Skills</h3>
+		<div class="row">
+			<ul class="list-unstyled">
+				<li ng-repeat="itm in content.skills" class="col-md-6 col-sm-12">
+					<star-rating title="itm.title" level="itm.level" data-toggle="tooltip" data-placement="bottom"></star-rating>
+				</li>
+			</ul>
+		</div>
+		<hr>
+		<h3>Tools</h3>
+		<div class="row">
+			<ul class="list-unstyled">
+				<li ng-repeat="itm in content.tools" class="col-md-6 col-sm-12">
+					<star-rating title="itm.title" level="itm.level" data-toggle="tooltip" data-placement="bottom"></star-rating>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

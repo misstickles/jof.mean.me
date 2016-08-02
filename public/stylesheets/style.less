@@ -1,3 +1,5 @@
+@import "variables.less";
+
 .header-content {
 	background-color: rgba(51, 51, 51, 0.3);
 	padding: 40px;
@@ -32,6 +34,66 @@
 		@media (min-width:768px) {
 			font-size: 20px;
 			line-height: 1.6;
+		}
+	}
+}
+
+#sidebar {
+	width: 50px;
+	overflow: hidden;
+
+	&.affix-top {
+		position: static;
+	}
+
+	&.affix {
+		top: 150px;
+	}
+
+	.icon {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 22px;
+	}
+
+	li > a {
+		line-height: 50px;
+		border-bottom-style: solid;
+		border-bottom-width: 3px;
+		border-bottom-color: @theme-primary;
+		cursor: pointer;
+	}
+
+	@media(min-width: 768px) {
+		width: 185px;
+		overflow: auto;
+	}
+
+}
+
+#resume {
+	ul > li {
+		&:hover {
+			margin-left: 2px;
+		}
+
+		.score {
+			float: right;
+		
+			.glyphicon {
+				color: #DFE0E0;
+				font-size: 14px;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				-o-transition: all 0.3s;
+				transition: all 0.3s;
+
+				&.filled {
+					color: green;
+				}
+
+			}
 		}
 	}
 }

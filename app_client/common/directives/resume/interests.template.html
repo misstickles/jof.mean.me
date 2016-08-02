@@ -1,0 +1,73 @@
+<section id="interests">
+	<h2 ng-bind="vm.data.general.experience.title"></h2>
+
+	<div class="row" ng-repeat="itm in vm.data.experience">
+		<div class="col-md-4">
+			<h4 ng-bind="itm.company"></h4>
+			<p>
+				<span ng-show="itm.startDate!=''" ng-bind="itm.startDate"></span>
+				<span ng-show="itm.startDate!='' && itm.endDate!=''"> - </span>
+				<span ng-show="itm.endDate!=''" ng-bind="itm.endDate"></span>
+			</p>
+			<p class="italic" ng-bind="itm.companyType"></p>
+		</div>
+		<div class="col-md-8">
+			<p>
+				<strong ng-bind="itm.position"></strong>
+				<ul>
+					<li ng-repeat="i in itm.description track by $index">
+						<span ng-bind-html="i | trusted"></span>
+					</li>
+				</ul>
+				<span ng-show="itm.address!=''" class="clearfix">
+					<i class="fa fa-location-arrow"></i>
+					<a ng-bind-html="itm.address | trusted"
+						data-toggle="modal"
+						data-target="#modalLocation"
+						data-company="{{itm.company}}"
+						data-address="{{itm.address}}"
+						data-location="{{itm.googleLocation}}"
+						data-zoom="{{itm.googleZoom}}"></a>
+				</span>
+				<span ng-show="itm.link!=''" class="clearfix">
+					<i class="fa fa-link"></i>
+					<a ng-href="{{itm.link}}" ng-bind="itm.link" target="_blank"></a>
+				</span>
+			</p>
+		</div>
+
+		<div class="col-md-4">
+			<h4 ng-bind="itm.company"></h4>
+			<p>
+				<span ng-show="itm.startDate!=''" ng-bind="itm.startDate"></span>
+				<span ng-show="itm.startDate!='' && itm.endDate!=''"> - </span>
+				<span ng-show="itm.endDate!=''" ng-bind="itm.endDate"></span>
+			</p>
+			<p class="italic" ng-bind="itm.companyType"></p>
+		</div>
+		<div class="col-md-8">
+			<p>
+				<strong ng-bind="itm.position"></strong>
+				<ul>
+					<li ng-repeat="i in itm.description track by $index">
+						<span ng-bind-html="i | trusted"></span>
+					</li>
+				</ul>
+				<span ng-show="itm.address!=''" class="clearfix">
+					<i class="fa fa-location-arrow"></i>
+					<a ng-bind-html="itm.address | trusted"
+						data-toggle="modal"
+						data-target="#modalLocation"
+						data-company="{{itm.company}}"
+						data-address="{{itm.address}}"
+						data-location="{{itm.googleLocation}}"
+						data-zoom="{{itm.googleZoom}}"></a>
+				</span>
+				<span ng-show="itm.link!=''" class="clearfix">
+					<i class="fa fa-link"></i>
+					<a ng-href="{{itm.link}}" ng-bind="itm.link" target="_blank"></a>
+				</span>
+			</p>
+		</div>
+	</div>
+</section>
