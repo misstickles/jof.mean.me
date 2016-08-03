@@ -86,3 +86,17 @@ update to Azure...
 jquery.easing does not work from npm.  Add file from github, https://github.com/gdsmith/jquery.easing/blob/master/jquery.easing.min.js, to app_client\lib
 
 angular-route is not available via npm.  Add file to app_client\lib
+
+
+
+
+<div ng-controller="ExampleController">
+	<select ng-model="template" ng-options="t.name for t in templates">
+		<option value="">(blank)</option>
+	</select>
+	url of the template: <code>{{template.url}}</code>
+	<hr/>
+	<div class="slide-animate-container">
+		<div class="slide-animate" ng-include="template.url"></div>
+	</div>
+</div>

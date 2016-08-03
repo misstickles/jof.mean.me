@@ -4,6 +4,7 @@ var router = express.Router();
 var mapsController = require('../controllers/maps');
 var towersController = require('../controllers/towers');
 var resumeController = require('../controllers/resume');
+var solarsystemController = require('../controllers/solarsystem');
 
 //var weatherController = require('../controllers/weather');
 
@@ -23,5 +24,7 @@ router.get('/towers/importData', towersController.importJsonData);
 //router.get('/weather/:time/:locationid', weatherController.getAllWeather);
 // 
 router.get('/resume', resumeController.getResume);
+
+router.get('/solarsystem/stars', solarsystemController.getStars);
 
 module.exports = router;

@@ -23,6 +23,10 @@
 				templateUrl: '/towers/towers.view.html',
 				controller: 'towersController',
 				controllerAs: 'vm'
+			}).when('/solarsystem', {
+				templateUrl: '/solarsystem/solarsystem.view.html',
+				controller: 'solarsystemController',
+				controllerAs: 'vm'
 			}).otherwise({
 				redirectTo: '/'
 			});

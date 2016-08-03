@@ -4,7 +4,7 @@
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-    	<meta name="description" content="jo faircloth personal mean stack javascript google maps sussex walks">
+    	<meta name="description" content="jo faircloth personal mean stack javascript google maps sussex walks soloar system threejs">
     	<meta name="author" content="Jo Faircloth">
 
 		<title>{{ vm.title }}</title>
@@ -55,6 +55,7 @@
   <script src='/common/services/mapsData.service.js'></script>
   <script src='/common/services/towersData.service.js'></script>
   <script src='/common/services/resumeData.service.js'></script>
+  <script src='/common/services/starsData.service.js'></script>
   <script src='/common/factories/googleMaps.factory.js'></script>
   <script src='/common/directives/common/scrollOnClick.directive.js'></script>
   <script src='/common/directives/common/starRating.directive.js'></script>
@@ -76,6 +77,27 @@
   <script src='/resume/resume.controller.js'></script>
   <script src='/maps/maps.controller.js'></script>
   <script src='/towers/towers.controller.js'></script>
+  <script src='/solarsystem/solarsystem.controller.js'></script>
+
+<script src="/javascripts/solarsystem/lib/Stats.min.js"></script>
+<script src="/javascripts/solarsystem/lib/dat.gui.min.js"></script>
+<script src="/javascripts/solarsystem/lib/three.js/three.js"></script>
+<script src="/javascripts/solarsystem/lib/three.js/Detector.js"></script>
+<script src="/javascripts/solarsystem/lib/three.js/TrackballControls.js"></script>
+<script src="/javascripts/solarsystem/Orbit3D.js"></script>
+<script src="/javascripts/solarsystem/Body3D.js"></script>
+<script src="/javascripts/solarsystem/Ephemeris.js"></script>
+<script src="/javascripts/solarsystem/util.js"></script>
+<script src="/javascripts/solarsystem/main.js"></script>
+
+<script>
+$('#webgl-container').height($(window).height() - 100);
+
+var solarsystem = new Solar3D({
+	container: document.getElementById('webgl-container')
+});
+</script>
+
 
 	</body>
 </html>
