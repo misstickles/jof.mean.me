@@ -9,8 +9,13 @@
 			return $http.get('/api/solarsystem/stars')
 		};
 
+		var getConstellations = function() {
+			return $http.get('/api/solarsystem/constellations')
+		};
+
 		return {
-			stars : getStars
+			stars : getStars,
+			constellations : getConstellations
 		};
 	}
 })();

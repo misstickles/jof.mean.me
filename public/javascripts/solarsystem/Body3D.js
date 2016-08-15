@@ -67,5 +67,11 @@
 		return planet;
 	};
 
+	Body3D.prototype.setPosition = function(jed) {
+		var pos = 
+		this.body.position.set()
+	};
+
 	window.Body3D = Body3D;
+	
 })();

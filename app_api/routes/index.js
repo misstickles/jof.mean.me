@@ -26,5 +26,6 @@ router.get('/towers/importData', towersController.importJsonData);
 router.get('/resume', resumeController.getResume);
 
 router.get('/solarsystem/stars', solarsystemController.getStars);
+router.get('/solarsystem/constellations', solarsystemController.getConstellations);
 
 module.exports = router;

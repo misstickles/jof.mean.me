@@ -21,7 +21,7 @@
 		var deltaT = Math.ceil(period / parts);
 		var position, vector, vertices = [];
 		for (var i = 0; i <= parts; i++, time += deltaT) {
-			position = this.getPositionAtTime(time);
+			position = getPositionAtTime(time, this.elements);
 			vector = new THREE.Vector3(position[0], position[1], position[2]);
 			vertices.push(vector);
 		}
@@ -30,7 +30,7 @@
 		var geometry = path.createGeometry(vertices);
 		var material = new THREE.LineBasicMaterial({
 			color: 0x990000,
-			linewidth: 1,
+			linewidth: 10,
 			opacity: 0.5
 		});
 
