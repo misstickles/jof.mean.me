@@ -51,6 +51,7 @@ var _readGpxFileToJson = function(filename) {
 					result['circular'] = mapData[filename].circular;
 					result['filename'] = filename;
 					result['date'] = mapData[filename].date;
+					result['photos'] = mapData[filename].photos;
 					jsonData.push(result);
 				}
 			});
