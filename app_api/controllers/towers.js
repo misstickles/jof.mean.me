@@ -1,5 +1,4 @@
 var fs = require('mz/fs');
-var linq = require('linq');
 
 var towersListDirectory = './app_api/data/towers/';
 var towersList = require('../data/towers/towers.data.json');
@@ -13,7 +12,6 @@ var jsonData = [];
 
 // GET return all towers
 module.exports.getAll = function(req, res) {
-	console.log('get all');
 	sendJsonResponse(res, 200, towersList);
 };
 

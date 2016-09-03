@@ -41,14 +41,19 @@ var _readGpxFileToJson = function(filename) {
 					return console.error('parseString error: ' + err);
 				}
 
-				result['title'] = mapData[filename].title;
-				result['desc'] = mapData[filename].desc;
-				result['tags'] = mapData[filename].tags;
-				result['dist'] = mapData[filename].dist;
-				result['circular'] = mapData[filename].circular;
-				result['filename'] = filename;
-				result['date'] = mapData[filename].date;
-				jsonData.push(result);
+				console.log(filename);
+
+				if (mapData[filename]) {
+					result['title'] = mapData[filename].title;
+					result['desc'] = mapData[filename].desc;
+					result['tags'] = mapData[filename].tags;
+					result['dist'] = mapData[filename].dist;
+					result['circular'] = mapData[filename].circular;
+					result['filename'] = filename;
+					result['date'] = mapData[filename].date;
+					result['photos'] = mapData[filename].photos;
+					jsonData.push(result);
+				}
 			});
 		}
 	});

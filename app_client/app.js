@@ -18,6 +18,7 @@
 			}).when('/resume', {
 				templateUrl: '/resume/resume.view.html',
 				controller: 'resumeController',
+				controllerAs: 'vm'
 			}).when('/towers', {
 				templateUrl: '/towers/towers.view.html',
 				controller: 'towersController',

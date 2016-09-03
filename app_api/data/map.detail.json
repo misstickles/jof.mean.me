@@ -1,4 +1,31 @@
 {
+	"2016-09-03_13-05_Sat.gpx" : {
+		"title": "Bentley Wildfowl and Motor Museum",
+		"desc": "A few hours out of the house.  I just like the pattern :o)",
+		"tags": [ "Day Out", "Bentley Wildfowl and Motor Museum", "Miniature Railway", "Ducks" ],
+		"dist": "short",
+		"date": "2016-09-03",
+		"circular": false,
+		"photos": "https://drive.google.com/folderview?id=0B1JBHKKGoDtJX0d6NmtUSWdoRWs&usp=sharing"
+	},
+	"2016-08-29_14-15_Mon.gpx" : {
+		"title": "Lindfield (South) - Wivlesfield - Scaynes Hill",
+		"desc": "Hidden paths, lumpy footing, couple of (official) detours and only one really big whoops...",
+		"tags": [ "Wivlesfield", "Scaynes Hill", "Wood Carvings", "Lindfield" ],
+		"dist": "8.88 miles",
+		"date": "2016-08-29",
+		"circular": true,
+		"photos": "https://drive.google.com/folderview?id=0B1JBHKKGoDtJOHpDdkJOTmVyNjA&usp=sharing"
+	},
+	"2016-07-17_14-28_Sun.gpx" : {
+		"title": "Lindfield (North) - Cuckfield - Ouse Valley Viaduct - Ardingly College",
+		"desc": "A variation on the walk on 02 July 2016, to replace the piccies the phone ate.  Lovely views over the Cuckfield golf course and the Ouse Valley.  Passes the Caravan Club's \"Certified Location\" at Great Bentley Farm.  LOL.",
+		"tags": [ "Cuckfield", "Ouse Valley Viaduct", "Ardingly Reservoir", "Lindfield" ],
+		"dist": "12.7 miles",
+		"date": "2016-07-17",
+		"circular": true,
+		"photos": "https://drive.google.com/folderview?id=0B1JBHKKGoDtJRldTQTV4T1JRRFE&usp=sharing"
+	},
 	"2016-07-08_15-58_Fri.gpx" : {
 		"title": "Daniel Walk",
 		"desc": "Walking with a 3 year old...  When a field full of oats bigger than you is actually very exciting.",
@@ -10,7 +37,7 @@
 	},
 	"2016-07-02_13-15_Sat.gpx" : {
 		"title": "Balcome - Staplefield - Ouse Valley Viaduct - Ardingly Reservoir",
-		"desc": "A hard-on-the-feet and hilly walk, with the purpose of gawping at the viaduct.  Gorgeous Sussex countryside in places, fabulous varied views, a reservoir and a VIADUCT!  (Be sure to collect a large slice of cake in the Tea Rooms.)",
+		"desc": "A hard-on-the-feet and hilly walk, with the purpose of gawping at the viaduct.  Gorgeous Sussex countryside in places, fabulous varied views, a reservoir and a VIADUCT!  (Be sure to collect a large slice of cake in the Tea Rooms.).  Phone ate photos :(",
 		"tags": [
 			"Balcombe", "Staplefield", "Ouse Valley Viaduct", "Ardingly Reservoir"
 		],
@@ -28,7 +55,7 @@
 		"dist": "12.5 miles",
 		"date": "2016-06-11",
 		"circular": true,
-		"photos": "http://pix.com"
+		"photos": "https://drive.google.com/folderview?id=0B1JBHKKGoDtJM3BnbmtkcnJEeFk&usp=sharing"
 	},
 	"2016-06-05_12-12_Sun.gpx" : {
 		"title": "Lindfield (North) - Ardingly Reservoir",
@@ -39,7 +66,7 @@
 		"dist": "6-ish miles",
 		"date": "2016-06-05",
 		"circular": true,
-		"photos": "http://pix.com"
+		"photos": "https://drive.google.com/folderview?id=0B1JBHKKGoDtJQWNfSGZ3RFlabU0&usp=sharing"
 	},
 	"2016-05-28_12-13_Sat.gpx" : {
 		"title": "Kingscote - Sheffield Park",
@@ -50,6 +77,6 @@
 		"dist": "approx. 10 miles",
 		"date": "2016-05-28",
 		"circular": false,
-		"photos": "http://pix.com"
+		"photos": "https://drive.google.com/folderview?id=0B1JBHKKGoDtJWm9wOW1ib0VWcHM&usp=sharing"
 	}
 }

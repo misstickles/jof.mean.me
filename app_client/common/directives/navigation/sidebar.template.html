@@ -1,0 +1,8 @@
+<ul id="sidebar" class="nav nav-stacked">
+	<li ng-repeat="m in content.menu">
+		<a scroll-on-click scroll-to="{{ m.link }}" class="{{ m.class }}">
+			<span class="icon" ng-show="m.icon"><i class="fa fa-{{ m.icon }}" aria-hidden="true"></i></span>
+			<span>{{ m.title }}</span>
+		</a>
+	</li>
+</ul>
